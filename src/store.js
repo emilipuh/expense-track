@@ -1,4 +1,11 @@
 let data = {
+  korisnik: {
+    data: {
+      ime: "Emili",
+      prezime: "Puh",
+      email: "emili.puh@gmail.com"
+    }
+  },
   stanjeRacuna: {
     data: [
       {
@@ -25,14 +32,14 @@ let data = {
         id: 1,
         kategorija: "Plaća",
         iznos: 1500,
-        datum: 2023 - 12 - 15,
+        datum: "2023 - 12 - 15",
         biljeska: "",
       },
       {
         id: 2,
         kategorija: "Ostalo",
         iznos: 150,
-        datum: 2023 - 12 - 15,
+        datum: "2023 - 12 - 15",
         biljeska: "Prihod od rentanja stana",
       },
     ],
@@ -42,7 +49,7 @@ let data = {
       id: 1,
       kategorija: "Ostalo",
       iznos: 150,
-      datum: 2023 - 12 - 15,
+      datum: "2023 - 12 - 15",
       biljeska: "Prihod od rentanja stana",
     },
   },
@@ -52,21 +59,21 @@ let data = {
         id: 11,
         kategorija: "Vozilo",
         iznos: 50,
-        datum: 2023 - 12 - 15,
+        datum: "2023 - 12 - 15",
         biljeska: "Trošak tankanja",
       },
       {
         id: 12,
         kategorija: "Kupovina",
         iznos: 70,
-        datum: 2023 - 12 - 15,
+        datum: "2023 - 12 - 15",
         biljeska: "Tjedna kupnja namirnica",
       },
       {
         id: 13,
         kategorija: "Edukacija",
         iznos: 30,
-        datum: 2023 - 12 - 15,
+        datum: "2023 - 12 - 15",
         biljeska: "Mjesečna uplata za tečaj",
       },
     ],
@@ -76,7 +83,7 @@ let data = {
       id: 11,
       kategorija: "Vozilo",
       iznos: 50,
-      datum: 2023 - 12 - 15,
+      datum: "2023 - 12 - 15",
       biljeska: "Trošak tankanja",
     },
   },
@@ -85,7 +92,7 @@ let data = {
       {
         id: 111,
         iznos: 200,
-        datum: 2023 - 12 - 15,
+        datum: "2023 - 12 - 15",
         biljeska: "Mjesečna štednja",
       },
     ],
@@ -94,7 +101,7 @@ let data = {
     data: {
       id: 111,
       iznos: 200,
-      datum: 2023 - 12 - 15,
+      datum: "2023 - 12 - 15",
       biljeska: "Mjesečna štednja",
     },
   },
