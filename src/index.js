@@ -1,4 +1,4 @@
-import express, { json } from "express";
+import express from "express";
 import cors from "cors";
 import data from "./store.js";
 
@@ -33,7 +33,7 @@ app.post("/korisnik/upisiPrihod", (req, res) => {
   res.send(req.body);
 });
 
-app.put("/korisnik/izmijeniPrihod/:idPrihod", (req, res) => {
+app.put("/korisnik/prihodi/izmijeniPrihod/:idPrihod", (req, res) => {
   let data = req.body; // upisujemo izmjene za određeni prihod // pretvorimo u string
   data = JSON.stringify(data);
 
@@ -49,7 +49,7 @@ app.put("/korisnik/izmijeniPrihod/:idPrihod", (req, res) => {
   }
 });
 
-app.delete("/korisnik/izbrisiPrihod/:idPrihod", (req, res) => {
+app.delete("/korisnik/prihodi/izbrisiPrihod/:idPrihod", (req, res) => {
   console.log("Obrisan prihod s id-em:", req.params.idPrihod);
   res.statusCode = 200;
   res.send();
@@ -70,7 +70,7 @@ app.post("/korisnik/upisiRashod", (req, res) => {
   res.send(req.body);
 });
 
-app.put("/korisnik/izmijeniRashod/:idRashod", (req, res) => {
+app.put("/korisnik/rashodi/izmijeniRashod/:idRashod", (req, res) => {
   let data = req.body; // upisujemo izmjene za određeni rashod // pretvorimo u string
   data = JSON.stringify(data);
 
@@ -80,13 +80,13 @@ app.put("/korisnik/izmijeniRashod/:idRashod", (req, res) => {
     res.json("There are parameters missing");
   } else {
     console.log("Izmjenjen je rashod sa id-em:", req.params.idRashod);
-    res.setHeader("Location", "/korisnik/rashod/14");
+    res.setHeader("Location", "/korisnik/rashodi/14");
     res.statusCode = 201;
     res.send();
   }
 });
 
-app.delete("/korisnik/izbrisiRashod/:idRashod", (req, res) => {
+app.delete("/korisnik/rashodi/izbrisiRashod/:idRashod", (req, res) => {
   console.log("Obrisan rashod s id-em:", req.params.idRashod);
   res.statusCode = 200;
   res.send();
@@ -107,7 +107,7 @@ app.post("/korisnik/upisiStednju", (req, res) => {
   res.send(req.body);
 });
 
-app.put("/korisnik/izmijeniStednju/:idStednja", (req, res) => {
+app.put("/korisnik/stednja/izmijeniStednju/:idStednja", (req, res) => {
   let data = req.body; // upisujemo izmjene za određenu stednju // pretvorimo u string
   data = JSON.stringify(data);
 
@@ -123,7 +123,7 @@ app.put("/korisnik/izmijeniStednju/:idStednja", (req, res) => {
   }
 });
 
-app.delete("/korisnik/izbrisiStednju/:idStednja", (req, res) => {
+app.delete("/korisnik/stednja/izbrisiStednju/:idStednja", (req, res) => {
   console.log("Obrisana stednja s id-em:", req.params.idStednja);
   res.statusCode = 200;
   res.send();
